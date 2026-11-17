@@ -1,0 +1,2 @@
+# Normalise line endings to LF so Windows checkouts match stylua.toml
+* text=auto eol=lf
