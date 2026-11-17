@@ -11,7 +11,9 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local UserInputService = game:GetService("UserInputService")
 
-local Config = require(ReplicatedStorage.Shared.Config)
+-- Wait for the shared folder to replicate to the client before requiring from it.
+local Shared = ReplicatedStorage:WaitForChild("Shared")
+local Config = require(Shared.Config)
 
 export type CameraMode = "FirstPerson" | "ThirdPerson"
 
